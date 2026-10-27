@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f0eee8">
+  <meta name="description" content="Tamás’s personal wishlist. A few things for gaming, tinkering, the gym, and an English manga collection.">
+  <title>Things I’d love — Tamás’s wishlist</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="image" href="assets/quest.jpg">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="./index.html" aria-label="Tamás’s wishlist home">T<span>/</span>M</a>
+    <nav aria-label="Main navigation">
+      <a class="active" href="./index.html" aria-current="page">The wishlist</a>
+      <a href="./manga.html">Manga <span class="nav-count">05</span></a>
+    </nav>
+    <button class="index-toggle" type="button" data-open-index>Index <span>14</span><span class="index-icon" aria-hidden="true"></span></button>
+  </header>
+
+  <main id="main">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-label"><span class="tiny-cross" aria-hidden="true">+</span><p>A personal collection<br> By Tamás, for you.</p></div>
+      <h1 id="page-title">Things I’d <em>love.</em></h1>
+      <div class="intro-note"><p>For the next time you ask,<br>“What would you like?”</p><a class="text-link" href="#collection">Explore the collection <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="showcase" aria-label="Explore a wish" tabindex="0">
+      <div class="showcase-top"><span class="eyebrow">Currently on my mind</span><span class="eyebrow" id="hero-counter">02 / 14</span></div>
+      <div class="showcase-body" id="hero-content" aria-live="polite" aria-atomic="true"></div>
+      <div class="showcase-bottom">
+        <div class="hero-caption"><span class="status-dot" aria-hidden="true"></span><span>Picked by me. Ready to be discovered by you.</span></div>
+        <div class="slide-controls"><button id="hero-prev" class="circle-button" type="button" aria-label="Previous wish">←</button><button id="hero-next" class="circle-button" type="button" aria-label="Next wish">→</button></div>
+      </div>
+    </section>
+
+    <section class="collection section-space" id="collection" aria-labelledby="collection-heading">
+      <div class="section-heading"><div><span class="eyebrow">The full collection / 01—14</span><h2 id="collection-heading">A little bit of <em>everything.</em></h2></div><p>Things to play with. Things to learn.<br>A few things for the shelf.</p></div>
+      <div class="collection-toolbar">
+        <div class="filter-list" aria-label="Filter wishlist" id="category-filters">
+          <button type="button" class="filter active" data-category="All" aria-pressed="true">All <sup>14</sup></button>
+          <button type="button" class="filter" data-category="Gaming" aria-pressed="false">Gaming</button>
+          <button type="button" class="filter" data-category="Tinkering" aria-pressed="false">Tinkering</button>
+          <button type="button" class="filter" data-category="Tech" aria-pressed="false">Tech</button>
+          <button type="button" class="filter" data-category="Gym" aria-pressed="false">Gym</button>
+          <button type="button" class="filter" data-category="Manga" aria-pressed="false">Manga</button>
+        </div>
+        <label class="search-field"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="gift-search" type="search" placeholder="Find a wish" aria-label="Search the wishlist"></label>
+      </div>
+      <p class="sr-only" id="gift-results" role="status"></p>
+      <div class="gift-grid" id="gift-grid"></div>
+      <div class="empty-state" id="gift-empty" hidden><h3>No wishes found.</h3><p>Try another search or category.</p><button type="button" class="text-link" id="reset-gifts">Show everything →</button></div>
+    </section>
+
+    <section class="manga-invitation section-space" aria-labelledby="manga-invitation-heading">
+      <div class="manga-invitation-copy"><span class="eyebrow">A collection within the collection</span><h2 id="manga-invitation-heading">One volume.<br>Or the <em>whole story.</em></h2><p>Five series I want to collect, all in English. Browse every single volume, deluxe and Perfect Edition, plus box sets and bundles.</p><a class="solid-link" href="./manga.html">Explore the manga shelf <span aria-hidden="true">↗</span></a></div>
+      <a class="book-fan" href="./manga.html" aria-label="Explore all five English manga series"><img src="assets/jujutsu-kaisen.jpg" alt="" loading="lazy"><img src="assets/hellsing.jpg" alt="" loading="lazy"><img src="assets/chainsaw-man.jpg" alt="" loading="lazy"><img src="assets/soul-eater.jpg" alt="" loading="lazy"><img src="assets/berserk.jpg" alt="" loading="lazy"></a>
+    </section>
+    <noscript><p class="noscript-note">Please enable JavaScript to browse the collection. <a href="https://github.com/molntam/Wishlist">The wishlist source and shop links are also on GitHub.</a></p></noscript>
+  </main>
+
+  <footer class="site-footer"><a class="footer-title" href="./index.html">A few things.<br>A lot of <em>possibilities.</em></a><div><p>Collected by Tamás.</p><p class="fine-print">Prices checked 27 Oct 2026, shown in their listed currency.<br>Prices and stock can change. Delivery and import costs may be extra.</p></div><a class="back-top" href="#main">Back to top ↑</a></footer>
+
+  <dialog id="index-dialog" class="index-dialog" aria-labelledby="index-title"><div class="dialog-top"><span class="eyebrow">The complete wishlist</span><button class="circle-button close-index" type="button" aria-label="Close index">×</button></div><h2 id="index-title">The <em>index.</em></h2><div id="index-list"></div><p class="fine-print">Every wish, in one place.</p></dialog>
+  <dialog id="product-dialog" class="product-dialog" aria-labelledby="product-title"><button class="circle-button close-product" type="button" aria-label="Close wish">×</button><div id="product-dialog-content"></div></dialog>
+</body>
+</html>

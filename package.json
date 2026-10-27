@@ -1,0 +1,10 @@
+{
+  "name": "tamas-wishlist",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A personal wishlist and English manga catalogue for GitHub Pages.",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "preview:prepare": "node scripts/prepare-preview.mjs"
+  }
+}
