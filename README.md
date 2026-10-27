@@ -4,6 +4,8 @@ Tamás’s personal gift wishlist, inspired by the restrained typography, warm b
 
 The site includes only the nine requested products and five requested manga series. It uses static HTML, CSS and JavaScript, with local product images and a self-hosted font. There are no runtime dependencies, accounts, analytics or server requirements.
 
+![Homepage preview](assets/preview.jpg)
+
 ## Publish on GitHub Pages
 
 1. Open this repository’s **Settings → Pages**.
